@@ -1,0 +1,95 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1e1317a7; /* Brighter blue background for a more vibrant look */
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive; /* Child-friendly font */
+}
+
+.container {
+    text-align: center;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px auto;
+    background-color: #eff674; /* Gold background for the board */
+    border: 5px solid #97eeecd3 ; /* Chocolate border */
+    border-radius: 15px; /* More rounded corners */
+    padding: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #ffefdb; /* Lighter cream background for cells */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem; /* Slightly larger font */
+    cursor: pointer;
+    border: 2px solid #d2b48c; /* Tan border */
+    border-radius: 10px; /* More rounded corners */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cell:hover {
+    background-color: #ffe4b5; /* Light orange background on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.cell.x {
+    color: #ff4500; /* Orange red color for X */
+    font-weight: bold; /* Bold for X */
+}
+
+.cell.o {
+    color: #1e90ff; /* Dodger blue color for O */
+    font-weight: bold; /* Bold for O */
+}
+
+.cell.winning {
+    background-color: #32cd32 !important; /* Lime green background for winning cells */
+    color: white !important; /* White text for winning cells */
+}
+
+#turnMessage {
+    font-size: 1.8rem; /* Larger font size */
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#winnerMessage {
+    font-size: 1.8rem; /* Larger font size */
+    color: #333;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 25px; /* Larger padding */
+    font-size: 1.2rem; /* Larger font size */
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #f3f041; /* Light salmon background */
+    border: none;
+    border-radius: 10px; /* More rounded corners */
+    color: rgb(8, 8, 8);
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+button:hover {
+    background-color: #def03f; /* Coral on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+button:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 3px rgba(255, 127, 80, 0.5); /* Custom focus ring */
+}
